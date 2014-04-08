@@ -35,7 +35,7 @@ public class Recommendation {
 			}
 		}
 		
-		return recommendationList;
+		return sortMovieList(recommendationList);
 	}
 	
 	private boolean isAdded(Movie tmpMovie){
@@ -70,4 +70,23 @@ public class Recommendation {
 		
 	}
 	
+	private MovieList sortMovieList(MovieList movieList)
+	{
+		Movie tmpMovie = new Movie();
+		boolean swapped = true;
+		int j=0;
+		while(swapped){
+			swapped = false;
+			j++;
+			for (int i = 0 ; i < movieList.getMovieList().size() -j ; i++){
+				if(movieList.getMovieList().get(i).getRating() < movieList.getMovieList().get(i+1).getRating()){
+					tmpMovie = movieList.getMovieList().get(i);
+					movieList.getMovieList().set(i, movieList.getMovieList().get(i+1));
+					movieList.getMovieList().set(i+1, tmpMovie);
+					swapped = true;
+				}
+			}
+		}	
+		return movieList;
+	}
 }
