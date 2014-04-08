@@ -3,8 +3,8 @@ package controller;
 public class Director {
 
 	
-	private String directorName;
-	private int directorId;
+	public String directorName;
+	public int directorId;
 	public Director(String directorName, int directorId) {
 		super();
 		this.directorName = directorName;

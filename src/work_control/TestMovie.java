@@ -1,4 +1,4 @@
-package test;
+package work_control;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,7 @@ import controller.Tag;
 import controller.TagList;
 import controller.UserMovie;
 
-public class testMovie {
+public class TestMovie {
 	
 	public static void main(String[] args){
 		
@@ -65,7 +65,7 @@ public class testMovie {
 		tmp1TagList.add(tag7);
 		tmp1TagList.add(tag8);
 	
-		Stars star1 = new Stars("Birkan Onar", 0 );
+		Stars star1 = new Stars("Brad Pitt", 0 );
 		Stars star2 = new Stars("Onur Kapçýk", 1 );
 		Stars star3 = new Stars("Reha Kurt", 2 );
 		Stars star4 = new Stars("Uður Pýnar",3 );

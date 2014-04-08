@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class MovieList {
 	
+	@SuppressWarnings("unused")
 	private Movie tmpMovie = new Movie();
 	private Movie typedMovie = new Movie();
 	private ArrayList<Movie> movieList = new ArrayList<Movie>();
