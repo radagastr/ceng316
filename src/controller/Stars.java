@@ -8,10 +8,11 @@ public class Stars {
 	public Stars() {
 		super();
 	}
-	public Stars(int starID, String starName) {
+	public Stars(String starName,int starID) {
 		super();
+		
+		this.starName = starName;
 		this.starID = starID;
-		this.starName = starName;		
 	}
 	public int getStarID() {
 		return starID;
