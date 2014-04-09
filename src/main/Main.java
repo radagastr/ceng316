@@ -1,4 +1,4 @@
-package work_control;
+package main;
 
 import java.util.ArrayList;
 
@@ -15,11 +15,17 @@ import controller.Tag;
 import controller.TagList;
 import controller.UserMovie;
 
-public class TestMovie {
+public class Main {
+	
+	/*In the first iteration we don't connect between java and database.
+	 * in order to make practice and test we hard coded with old style main,
+	 * create sample movies, genre etc.. then create user movie.
+	 * after that, compare user movie in our movie list. 
+	 * */
 	
 	public static void main(String[] args){
 		
-
+		//sample movies, genres, tag etc..
 		ArrayList<Genre> tmpGenreList = new ArrayList<Genre>();
 		ArrayList<Genre> tmp1GenreList = new ArrayList<Genre>();
 		ArrayList<Genre> tmp2GenreList = new ArrayList<Genre>();
@@ -96,7 +102,6 @@ public class TestMovie {
 		tmpList = recommend.searchMovie();
 		for(int i = 0 ; i < tmpList.getMovieList().size() ; i++){
 			System.out.println(tmpList.getMovieList().get(i).getMovieName());
-			System.out.println(tmpList.getMovieList().get(i).getRating());
 		}
 	
 		

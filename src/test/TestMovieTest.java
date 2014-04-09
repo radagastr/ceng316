@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-import work_control.TestMovie;
+import main.Main;
 
 import org.junit.Before;
 import org.junit.Test;

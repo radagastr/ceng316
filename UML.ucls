@@ -129,185 +129,185 @@
   </class>  
   <association id="15">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="16" name="movieList"/>      
-      <multiplicity id="17" minimum="0" maximum="2147483647"/>    
+      <attribute id="16" name="tmpMovie"/>      
+      <multiplicity id="17" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="18">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="19" name="tagList"/>      
+    <bendpoint x="63" y="603"/>    
+    <bendpoint x="63" y="1138"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="19" name="tmpGenreList"/>      
       <multiplicity id="20" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="21">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="22" name="tagList"/>      
+      <multiplicity id="23" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="21">    
-    <bendpoint x="777" y="356"/>    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="22" name="movies"/>      
-      <multiplicity id="23" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <association id="24">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="25" name="genreList"/>      
-      <multiplicity id="26" minimum="0" maximum="1"/>    
+    <bendpoint x="21" y="603"/>    
+    <bendpoint x="21" y="1138"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="25" name="tmpTagList">        
+        <position height="18" width="61" x="209" y="1366"/>      
+      </attribute>      
+      <multiplicity id="26" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="27">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="28" name="tmpMovie"/>      
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="28" name="movie1"/>      
       <multiplicity id="29" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="30">    
-    <bendpoint x="84" y="1138"/>    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="31" name="tag"/>      
+      <attribute id="31" name="origin"/>      
       <multiplicity id="32" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="33">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="34" name="movie1"/>      
-      <multiplicity id="35" minimum="0" maximum="1"/>    
+    <bendpoint x="777" y="356"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="34" name="movies"/>      
+      <multiplicity id="35" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="36">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="37" name="director"/>      
+      <attribute id="37" name="origin"/>      
       <multiplicity id="38" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="39">    
-    <bendpoint x="348" y="603"/>    
-    <bendpoint x="367" y="1138"/>    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="40" name="tmpStarList"/>      
-      <multiplicity id="41" minimum="0" maximum="2147483647"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="40" name="recommendationList"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="42">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="43" name="starList"/>      
-      <multiplicity id="44" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="45">    
-    <bendpoint x="21" y="603"/>    
-    <bendpoint x="21" y="1138"/>    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="46" name="tmpTagList">        
-        <position height="18" width="61" x="209" y="1366"/>      
-      </attribute>      
-      <multiplicity id="47" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="48">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="49" name="genreList"/>      
-      <multiplicity id="50" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="51">    
-    <bendpoint x="42" y="603"/>    
-    <bendpoint x="42" y="1138"/>    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="52" name="genre1"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="54">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="55" name="starsList"/>      
-      <multiplicity id="56" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="57">    
-    <bendpoint x="388" y="1138"/>    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="58" name="star"/>      
-      <multiplicity id="59" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="60">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="61" name="typedMovie"/>      
-      <multiplicity id="62" minimum="0" maximum="1"/>    
+      <attribute id="43" name="typedMovie"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="63">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="64" name="tagList"/>      
-      <multiplicity id="65" minimum="0" maximum="1"/>    
+  <association id="45">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="46" name="movieList"/>      
+      <multiplicity id="47" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="66">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="67" name="director"/>      
-      <multiplicity id="68" minimum="0" maximum="1"/>    
+  <association id="48">    
+    <bendpoint x="0" y="603"/>    
+    <bendpoint x="0" y="1138"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="49" name="tag1"/>      
+      <multiplicity id="50" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="52" name="starsList"/>      
+      <multiplicity id="53" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="55" name="userMovie"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="58" name="director"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="69">    
+  <association id="60">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="61" name="starList"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <bendpoint x="42" y="603"/>    
+    <bendpoint x="42" y="1138"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="64" name="genre1"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="66">    
     <bendpoint x="105" y="603"/>    
     <bendpoint x="105" y="1138"/>    
     <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="70" name="star1"/>      
-      <multiplicity id="71" minimum="0" maximum="1"/>    
+      <attribute id="67" name="star1"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="69">    
+    <bendpoint x="348" y="603"/>    
+    <bendpoint x="367" y="1138"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="70" name="tmpStarList"/>      
+      <multiplicity id="71" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="72">    
-    <bendpoint x="0" y="603"/>    
-    <bendpoint x="0" y="1138"/>    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="73" name="tag1"/>      
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="73" name="tagList"/>      
       <multiplicity id="74" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="75">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="76" name="origin"/>      
+      <attribute id="76" name="director"/>      
       <multiplicity id="77" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="78">    
@@ -321,53 +321,53 @@
   <association id="81">    
     <bendpoint x="514" y="356"/>    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="82" name="mv"/>      
+      <attribute id="82" name="userMovie"/>      
       <multiplicity id="83" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="84">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="85" name="origin"/>      
+    <bendpoint x="388" y="1138"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="85" name="star"/>      
       <multiplicity id="86" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="87">    
-    <bendpoint x="126" y="1138"/>    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="88" name="genre"/>      
-      <multiplicity id="89" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="88" name="genreList"/>      
+      <multiplicity id="89" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="90">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="91" name="recommendationList"/>      
+    <bendpoint x="126" y="1138"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="91" name="genre"/>      
       <multiplicity id="92" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="93">    
-    <bendpoint x="63" y="603"/>    
-    <bendpoint x="63" y="1138"/>    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="94" name="tmpGenreList"/>      
-      <multiplicity id="95" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="93">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="94" name="genreList"/>      
+      <multiplicity id="95" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <association id="96">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="97" name="userMovie"/>      
+    <bendpoint x="84" y="1138"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="97" name="tag"/>      
       <multiplicity id="98" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

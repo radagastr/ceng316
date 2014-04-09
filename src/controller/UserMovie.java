@@ -2,19 +2,27 @@ package controller;
 
 public class UserMovie {
 	
-	 private Genre genre = new Genre();
-	 private Tag tag = new Tag();
-	 private Director director = new Director();
-	 private Origin origin = new Origin();
-	 private Stars star = new Stars();
-	 private int year;
-	 private int imdbRating;
+	/*This class using for the collect all information that user want to watch.
+	 * in the scenario user has to choice at least genre.However we will suggest to user that
+	 * S/He give more information to us to recommend best movie in order to his/her choices.
+	 * 
+	 * This is not same with our movie class but there is similarly with it,
+	 * userMovie will create after he give the parameters.
+	 * */
+	
+	private Genre genre = new Genre();
+	private Tag tag = new Tag();
+	private Director director = new Director();
+	private Origin origin = new Origin();
+	private Stars star = new Stars();
+	private int year;
+	private int imdbRating;
 	 
-	 public UserMovie() {
+	public UserMovie() {
 		super();
 	}
 
-	 public UserMovie(Genre genre, Tag tag, Director director, Origin origin,
+	public UserMovie(Genre genre, Tag tag, Director director, Origin origin,
 			Stars star, int year, int imdbRating) {
 		super();
 		this.genre = genre;
@@ -31,7 +39,10 @@ public class UserMovie {
 	}
 
 	public void setGenre(Genre genre) {
-		this.genre = genre;
+		if(genre != null)
+			this.genre = genre;
+		else
+			throw new NullPointerException("User has to choice at least one genre");
 	}
 
 	public Tag getTag() {

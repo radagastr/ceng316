@@ -1,6 +1,11 @@
 package controller;
 
 public class Tag {
+	
+	/*This class using for create tag.Next iteration  we use database connection
+	 * to get tag name and ID.Tag name cannot be null and 
+	 * tagID should be 0 or positive integer number
+	 */
 
 	private String tagName;
 	private int tagID;
@@ -20,7 +25,10 @@ public class Tag {
 	}
 
 	public void setTagName(String tagName) {
-		this.tagName = tagName;
+		if(tagName != null)
+			this.tagName = tagName;
+		else
+			throw new NullPointerException("Tag has to have a name!");
 	}
 
 	public int getTagID() {
@@ -28,7 +36,10 @@ public class Tag {
 	}
 
 	public void setTagID(int tagID) {
-		this.tagID = tagID;
+		if(tagID >= 0)
+			this.tagID = tagID;
+		else
+			this.tagID = -1;
 	}
 	
 	

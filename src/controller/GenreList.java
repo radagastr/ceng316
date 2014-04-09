@@ -18,8 +18,12 @@ public class GenreList {
 	public ArrayList<Genre> getGenreList() {
 		return genreList;
 	}
+	
 	public void setGenreList(ArrayList<Genre> genreList) {
-		this.genreList = genreList;
+		if (genreList != null)
+			this.genreList = genreList;
+		else
+			throw new NullPointerException("GenreList must contain at least 1 genre");
 	}
 	
 	
