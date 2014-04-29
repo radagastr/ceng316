@@ -25,7 +25,7 @@ public class Origin {
 	}
 
 	public void setOriginName(String originName) {
-		if(originName == null)
+		if(originName != null)
 			this.originName = originName;
 		else
 			throw new NullPointerException("Origin has to have a name");

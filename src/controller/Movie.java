@@ -14,16 +14,18 @@ public class Movie {
 	private Origin origin = new Origin();
 	private StarList starList = new StarList();
 	private String movieName;
+	private int movieID;
 	private int year;
 	private int rating = 0;
 	private int imdbRating;
+	private String description;
 	
 	public Movie() {
 		super();
 	}
 	
 	public Movie(GenreList genre, TagList tag, Director director, Origin origin,
-			StarList star, String movieName, int year,  int imdbRating) {
+			StarList star, String movieName,int movieID, int year,  int imdbRating,String description) {
 		super();
 		this.genreList = genre;
 		this.tagList = tag;
@@ -31,8 +33,10 @@ public class Movie {
 		this.origin = origin;
 		this.starList = star;
 		this.movieName = movieName;
+		this.movieID = movieID;
 		this.year = year;
 		this.imdbRating = imdbRating;
+		this.description = description;
 	}
 	
 	public GenreList getGenre() {
@@ -86,7 +90,7 @@ public class Movie {
 	}
 	
 	public void setMovieName(String movieName) {
-		if(movieName == null)
+		if(movieName != null)
 			this.movieName = movieName;
 		else
 			throw new NullPointerException("Movie has to have movie name");
@@ -114,6 +118,22 @@ public class Movie {
 	
 	public void setImdbRating(int imdbRating) {
 		this.imdbRating = imdbRating;
+	}
+
+	public int getMovieID() {
+		return movieID;
+	}
+
+	public void setMovieID(int movieID) {
+		this.movieID = movieID;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	

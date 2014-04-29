@@ -30,7 +30,7 @@ public class TestMovieTest {
 	Tag tag1 = new  Tag("murder" , 0);
 	Stars star1 = new Stars("Brad Pitt", 0 );
 	ArrayList<Stars> tmpStarList = new ArrayList<Stars>();
-	Movie movie1 = new Movie(new GenreList(tmpGenreList), new TagList(tmpTagList),  new Director("martin" , 0), new Origin("Hollywood" ,0), new StarList(tmpStarList), "Get me", 1999, 8);
+	Movie movie1 = new Movie(new GenreList(tmpGenreList), new TagList(tmpTagList),  new Director("martin" , 0), new Origin("Hollywood" ,0), new StarList(tmpStarList), "Get me",1, 1999, 8,"");
 	@Before
 	
 	 //==================================
