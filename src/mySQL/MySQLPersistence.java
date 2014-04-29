@@ -43,20 +43,6 @@ public class MySQLPersistence {
 		}
 	}
 	
-	public Director getDirector() throws SQLException{
-		Director director = new Director();
-		String query = "Select DirectorID,directorName from director";
-		Statement st = connection.createStatement();
-		ResultSet rs = st.executeQuery(query);
-	while (rs.next()) {
-		String director_id = rs.getString(2);
-		int id = rs.getInt(1);
-		director.setDirectorId(id);
-		director.setDirectorName(director_id);
-		}
-	return director;
-	}
-	
 	public MovieList getAllMovie() throws SQLException{
 		MovieList movieList = new MovieList();
 		
@@ -73,7 +59,8 @@ public class MySQLPersistence {
 				for(i = 1; i<=countMovie ; i++){
 					Movie movie = new Movie();
 					
-					String movieDetails = "select MovieID, MovieName, IMDBrating, MovieYear, MovieDesc from movie where MovieID =" + i;
+					String movieDetails = "select MovieID, MovieName, IMDBrating, MovieYear, MovieDesc "
+							+ "from movie where MovieID =" + i;
 					Statement st1 = connection.createStatement();
 					ResultSet rs1 = st1.executeQuery(movieDetails);
 					
@@ -96,7 +83,9 @@ public class MySQLPersistence {
 						movie.getDirector().setDirectorName(rs2.getString(2));
 					}
 					
-					String movieStars = "select s.StarsID , CONCAT(s.StarsName, ' ' , s.StarsLastName)  from moviestars ms , stars s where ms.StarsID=s.StarsID and ms.MovieID=" + i;
+					String movieStars = "select s.StarsID , CONCAT(s.StarsName, ' ' , s.StarsLastName)  "
+							+ "from moviestars ms , stars s "
+							+ "where ms.StarsID=s.StarsID and ms.MovieID=" + i;
 					ResultSet rs3 = st1.executeQuery(movieStars);
 					
 					while(rs3.next()){
@@ -106,7 +95,8 @@ public class MySQLPersistence {
 						movie.getStar().getStarsList().add(tempStar);
 					}
 					
-					String movieGenre = "select g.GenreID,g.GenreName from genre g, moviegenre mg where g.GenreID=mg.GenreID and mg.MovieID=" + i;
+					String movieGenre = "select g.GenreID,g.GenreName from genre g, moviegenre mg "
+							+ "where g.GenreID=mg.GenreID and mg.MovieID=" + i;
 					ResultSet rs4 = st1.executeQuery(movieGenre);
 					
 					while(rs4.next()){
@@ -116,7 +106,8 @@ public class MySQLPersistence {
 						movie.getGenre().getGenreList().add(tempGenre);
 					}
 					
-					String movieTag ="select t.tagID , t.tagName from tag t, movietag mt where t.tagID=mt.tagID and mt.MovieID=" + i;
+					String movieTag ="select t.tagID , t.tagName from tag t, movietag mt "
+							+ "where t.tagID=mt.tagID and mt.MovieID=" + i;
 					ResultSet rs5 = st1.executeQuery(movieTag);
 					
 					while(rs5.next()){
@@ -126,7 +117,8 @@ public class MySQLPersistence {
 						movie.getTag().getTagList().add(tempTag);
 					}
 					
-					String movieOrigin ="select o.OriginID , o.OriginName from origin o , movieorigin mo where o.originID = mo.originID and mo.MovieID=" + i;
+					String movieOrigin ="select o.OriginID , o.OriginName from origin o , movieorigin mo "
+							+ "where o.originID = mo.originID and mo.MovieID=" + i;
 					ResultSet rs6 = st1.executeQuery(movieOrigin);
 					
 					while(rs6.next()){
