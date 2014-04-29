@@ -1,5 +1,5 @@
 package main;
-
+//github sorunu deneme
 import java.sql.SQLException;
 import mySQL.MySQLPersistence;
 
