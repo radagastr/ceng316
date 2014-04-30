@@ -21,7 +21,4 @@ public class StarList {
 		this.starsList = starsList;
 	}
 	
-	
-	
-	
 }

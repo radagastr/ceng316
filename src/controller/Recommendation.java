@@ -50,25 +50,25 @@ public class Recommendation {
 	private boolean isAdded(Movie tmpMovie){
 		//if our movie contain genre that user want, get score 8
 		for(int i = 0 ; i < tmpMovie.getGenre().getGenreList().size() ; i++){
-			if(tmpMovie.getGenre().getGenreList().get(i).getGenreName() == userMovie.getGenre().getGenreName())
+			if(tmpMovie.getGenre().getGenreList().get(i).getGenreName().equals(userMovie.getGenre().getGenreName()))
 				tmpMovie.setRating(tmpMovie.getRating() + 8);
 		}
 		//if our movie contain tag that user want, get score 10
 		for(int i = 0 ; i < tmpMovie.getTag().getTagList().size() ; i++){
-			if(tmpMovie.getTag().getTagList().get(i).getTagName() == userMovie.getTag().getTagName())
+			if(tmpMovie.getTag().getTagList().get(i).getTagName().equals(userMovie.getTag().getTagName()))
 				tmpMovie.setRating(tmpMovie.getRating() + 10);			
 		}
 		//if our movie contain star that user want, get score 4
 		for(int i = 0 ; i < tmpMovie.getStar().getStarsList().size() ; i++){
-			if(tmpMovie.getStar().getStarsList().get(i).getStarName() == userMovie.getStar().getStarName())
+			if(tmpMovie.getStar().getStarsList().get(i).getStarName().equals(userMovie.getStar().getStarName()))
 				tmpMovie.setRating(tmpMovie.getRating() + 4);
 		}
 		//if our movie's director is same with user's want get score 5
-		if(tmpMovie.getDirector().getDirectorName() == userMovie.getDirector().getDirectorName())
+		if(tmpMovie.getDirector().getDirectorName().equals(userMovie.getDirector().getDirectorName()))
 			tmpMovie.setRating(tmpMovie.getRating() + 5);
 		
 		//if our movie's origin is same with user's want get score 5
-		if(tmpMovie.getOrigin().getOriginName() == userMovie.getOrigin().getOriginName())
+		if(tmpMovie.getOrigin().getOriginName().equals(userMovie.getOrigin().getOriginName()))
 			tmpMovie.setRating(tmpMovie.getRating() + 7);
 		
 		//if our movie's imdb rating same or bigger than user's want get score 6
@@ -77,7 +77,7 @@ public class Recommendation {
 		
 		//if our movie get more than that score, we add it to recommend list.
 		//with bigger movie list we can increase this minimum rating.
-		if(tmpMovie.getRating() > 0)
+		if(tmpMovie.getRating() > 10)
 			return true;
 		return false;
 		
